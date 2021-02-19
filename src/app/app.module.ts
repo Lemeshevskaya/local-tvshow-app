@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CurrentInfTvshowComponent } from './current-inf-tvshow/current-inf-tvshow.component';
+import { TvshowService } from './tvshow.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,9 +14,10 @@ import { CurrentInfTvshowComponent } from './current-inf-tvshow/current-inf-tvsh
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TvshowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

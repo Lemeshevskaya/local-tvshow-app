@@ -1,6 +1,6 @@
 export interface ICurrentTvShow {
   name: string
-  country:string
+  country: string
   language: string
   genres: string[]
   officialSite: string
@@ -8,5 +8,7 @@ export interface ICurrentTvShow {
   weight: number
   summary: string
   image: string
+  premiered: Date
+  status: string
 }
 
