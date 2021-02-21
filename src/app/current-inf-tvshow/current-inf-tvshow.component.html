@@ -1,22 +1,22 @@
 <div>
   <div>
-    <span>
-      <img [src] ="current.image" alt="">
-    </span>
+    <div>
+      <img src ={{current?.image}} alt="Anton">
+    </div>
   </div>
  <div>
-   <span>{{current.name}}</span><br>    
+   <div>{{current?.name}}</div><br>    
  </div>
  <div>
-   <span>{{current.premiered | date:'fullDate'}}</span>
-   <span>{{current.country}}</span>
-   <span>{{current.genres}}</span>
-   <span>{{current.language}}</span>
-   <span>{{current.status}}</span>
-   <span>{{current.officialSite}}</span>
+   <div>{{current?.premiered | date:'mediumDate'}}</div>
+   <div>{{current?.country}}</div>
+   <div>{{current?.genres}}</div>
+   <div>{{current?.language}}</div>
+   <div>{{current?.status}}</div>
+   <div innerHTML={{current?.summary}}></div>
   </div>
  <div>
-  <span>{{current.rating}}</span>
-  <span>{{current.weight}}</span>
+  <div>{{current?.rating}}</div>
+  <div>{{current?.weight}}</div>
  </div>
 </div>

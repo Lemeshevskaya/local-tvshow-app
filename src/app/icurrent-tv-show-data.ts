@@ -1,23 +1,53 @@
 export interface ICurrentTvShowData {
-  show {
+ 
     name: string,
     language: string,
-    genres: string[];
+    genres: string[],
     status: string,
     premiered: Date,
-    officialSite: string,
-    rating{
-      average:number
+    rating: {
+      average: number
     },
     weight: number,
-    network {
-      country {
+    network: {
+      country: {
         name: string
       }
     },
-    image {
+    image: {
       medium: string
     },
     summary: string
   }
-}
+
+
+
+//     show:  Show;
+// }
+// export interface Show {
+//     name:         string;
+//     language:     string;
+//     genres:       string[];
+//     status:       string;
+//     premiered:    Date;
+//     rating:       Rating;
+//     weight:       number;
+//     image:        Image;
+//     summary:      string;
+//     network:      Network;
+// }
+// export interface Image {
+//     medium:   string;
+// }
+
+// export interface Network {
+//     country: Country;
+// }
+
+// export interface Country {
+//     name:     string;
+// }
+
+// export interface Rating {
+//     average: number;
+// }

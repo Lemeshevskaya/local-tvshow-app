@@ -1,5 +1,8 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { subscribeOn } from 'rxjs/operators';
 import { ICurrentTvShow } from '../icurrent-tv-show';
+import { TvshowService } from '../tvshow.service';
 
 @Component({
   selector: 'app-current-inf-tvshow',
@@ -9,23 +12,24 @@ import { ICurrentTvShow } from '../icurrent-tv-show';
 export class CurrentInfTvshowComponent implements OnInit {
   current: ICurrentTvShow
 
-  constructor() {
-    this.current = {
-      name: 'Boys',
-      country: 'US',
-      language: 'Russion',
-      genres: ['Drama','Horror'],
-      officialSite: 'http://www.hbo.com/girls',
-      rating: 9.2,
-      weight: 98,
-      summary: 'Bla-bla-bla-bla-bla',
-      image: 'http://static.tvmaze.com/uploads/images/medium_portrait/31/78286.jpg',
-      premiered: new Date(),
-      status: 'Ended'
-    }
+  constructor(private tvshowService: TvshowService) {
+    // this.current = {
+    //   name: '',
+    //   country: '',
+    //   language: '',
+    //   genres: ['fe','ef'],
+    //   rating: 0,
+    //   weight: 0,
+    //   summary: '',
+    //   image: '',
+    //   premiered: new Date(),
+    //   status: ''
+    // };
+    
    }
 
   ngOnInit(): void {
+    this.tvshowService.getCurrentTvShow('Harrow').subscribe(data => this.current = data);
   }
 
 }

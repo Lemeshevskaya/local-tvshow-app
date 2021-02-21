@@ -3,7 +3,6 @@ export interface ICurrentTvShow {
   country: string
   language: string
   genres: string[]
-  officialSite: string
   rating: number
   weight: number
   summary: string
