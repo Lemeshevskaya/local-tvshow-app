@@ -6,6 +6,7 @@
 .content-inf_description {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .content-inf_description > div {
   flex-direction: column;
@@ -27,6 +28,7 @@ text-align: left;
 }
 .content-inf_content > div {
   display: flex;
+  flex-wrap: wrap;
   padding: 10px 0;
 }
 .content-inf_item {
@@ -46,7 +48,7 @@ text-align: left;
   text-align: justify;
 }
 .content-inf_stars {
-  padding-left: 20px;
+  padding-left: 40px;
 }
 .content-inf_stars span:nth-child(1) {
   font-size: 1.8em;
