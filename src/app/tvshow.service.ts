@@ -12,8 +12,14 @@ export class TvshowService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getCurrentTvShow(name: string){
-     return this.httpClient.get<ICurrentTvShowData>(`http://api.tvmaze.com/singlesearch/shows?q=${name}`).pipe(
+  getCurrentTvShow(search: string){
+
+      let uriParams = '';
+      if (typeof search === 'string') {
+        uriParams = `q=${search}`
+      }
+
+     return this.httpClient.get<ICurrentTvShowData>(`http://api.tvmaze.com/singlesearch/shows?q=${search}`).pipe(
       //  map(data => this.transformToIcurrentTvShow(data))
       map(data => this.transformToIcurrentTvShow(data))
      )
